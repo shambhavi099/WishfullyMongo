@@ -1,27 +1,18 @@
- 
-const wrapper = document.querySelector('.wrapper');
-const loginLink = document.querySelector('.login-link');
-const signupLink = document.querySelector('.signup-link');
-const popBtn = document.querySelector('.popup-button');
-const closeBtn = document.querySelector('.close'); 
+document.querySelector(".btn").addEventListener("click", async (event) => {
+    event.preventDefault(); // Prevent form from refreshing page
 
-signupLink.addEventListener('click',()=>{
-    wrapper.classList.add('active');
+    const username = document.getElementById("username")?.value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("passs").value;
+
+    const response = await fetch("http://localhost:5001/register", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, email, password }),
+    });
+
+    const data = await response.json();
+    alert(data.message); // Show response message
 });
-
-loginLink.addEventListener('click',()=>{
-    wrapper.classList.remove('active');
-});
-
-popBtn.addEventListener('click',() => {
-     wrapper.classList.add('active-popup');  
-});
-closeBtn.addEventListener('click',() => {
-     wrapper.classList.remove('active-popup');  
-});
-
-
-
-
-
-

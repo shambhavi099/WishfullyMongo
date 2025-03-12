@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+html,body{
+margin:0;
+padding:0;
+}
+* {
+    margin:0;
+    padding:0;
+   box-sizing:border-box;
+   font-family:'Sriracha';
+}
+body{
+    background: url('./img/d60.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+   
+   
+}
+header{
+    position:fixed;
+    background: url('./backgroundSignup.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height:20px;
+    left: 0;
+    top: 0;
+    right: 0; 
+    padding:40px 100px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+}
+
+.logo{
+    font-size: 2rem;
+    user-select: none;
+    margin-top:5%;
+    margin-left: -150px;;
+}
+
+.navigation a{ 
+    position:relative;
+    font-size: 1.1em;
+    color: #4c6e2f;
+    font-weight: 700;
+    margin-left: 40px;
+}
+.navigation a::after{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:3px;
+    background-color: #4c6e2f;
+    left:0%;
+    bottom: -6px;
+    border-radius: 6px;
+    transform: scaleX(0);
+    transition: 1s;
+}
+
+.navigation a:hover::after {
+transform: scaleX(1);
+text-decoration: underline;
+}
+
+.popup-button{
+    width:150px;
+    height: 50px;
+   
+    border: 2px solid #4c6e2f;
+    outline: auto;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color:#4c6e2f;
+    font-weight: 500;
+    margin-left: 40px;
+    transition:1s;
+}
+
+.pop-button:hover{
+    background:#4c6e2f;
+    color: #4c6e2f;
+
+}
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: whitesmoke; /* Add a semi-transparent background color */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform 0.5s ease-out, height 0.2s ease;
+}
+
+
+.wrapper.active-popup{
+    transform: scale(1);
+}
+
+.wrapper .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 35px;
+    width: 40px;
+    font-size: 1.5em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: #333;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 1000;
+}
+
+
+ 
+.wrapper .form-box{
+width: 100%;
+padding: 40px;
+}
+.wrapper.active{
+    height: 520px;
+}
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+.wrapper .form-box.login{
+    transition: transform .18s ease ;
+    transform: translateX(0);
+}
+
+.wrapper .form-box.signup{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+ 
+.wrapper.active .form-box.signup{
+    transition: transform .18s ease ;
+    transform: translateX(0);
+}
+.form-box h2{
+    font-size: 2em;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #d6dccc;
+    margin: 30px 0 ;
+}
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #4c6e2f;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top:9px ;
+}
+
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: black;
+    font-weight: 500;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #4c6e2f;
+    line-height: 57px;
+}
+
+.remember-forget{
+    font-size: .9em;
+    color: #4c6e2f;
+    font-weight: 500;
+    margin: 15 0 15;
+    display: flex;
+    justify-content:space-between ;
+}
+.remember-forget label input{
+    accent-color: #d6dccc;
+   margin-right: 3px;
+}
+.remember-forget a{
+    color: #4c6e2f;
+    text-decoration: dashed;
+}
+.remember-forget a:hover{
+    text-decoration: underline; 
+}
+
+.btn{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    outline: none;
+    border-radius: 9px;
+    background: #d6dccc;
+    border: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    color:#4c6e2f ;
+}
+.btn a{
+    font-size:.9em;
+    color: #4c6e2f;
+}
+.register {
+     
+    text-align: center;
+     
+
+}
+.register a{
+    font-size: .9em;
+    color: #4c6e2f;
+}
+ 
+
+
+
+
+
+
+
+

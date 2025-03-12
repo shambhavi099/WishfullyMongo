@@ -1,5 +1,5 @@
 .head-box {
-    margin-top: 7%;
+    margin-top: 2%;
     margin-left: 5%;
     height: 100vh; 
     width: 90%;
@@ -13,4 +13,219 @@
     width: 100%;
     border-radius: 9px;
 }
+.recent{
+    margin-left: 5%;
+    margin-top:4%;
+    width:90%;
+    height:500px;
+    display: flex;
+    justify-content: space-between; /* Distribute children evenly */
+    align-items: center;
+    padding:5px;
+}
+.sale{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,bold;
+    margin-top:10px;
+    margin-left:10px ;
+    position: relative;
+   font-weight: bold;
+}
+.recentl1 ,.recentl2, .recentl3{
+    height:98%;
+    width:30%;
+    background-color: aliceblue;
 
+}
+.recentl1-left{
+    /* position: absolute; */
+    margin-left: 12px;
+    width:42%;
+    height:92%;
+    margin-right:12px;
+    
+}
+.recentl1-right{
+   
+    margin-top: -100%;
+    margin-left: 50%;
+    width:42%;
+    height:80%;
+}
+.recentl1-Pro1{
+    margin:5px;
+    height: 35%;
+    width: 100%;
+    background: url('./img/colour.jpg') no-repeat center center; /* Set background image */
+    background-size: cover; /* Make sure the image covers the entire box */
+    background-position: center;
+}
+.recentl1-Pro2{
+    margin:5px;
+    height: 35%;
+    width: 100%;
+    background: url('./img/scrunchies.jpg') no-repeat center center; /* Set background image */
+    background-size: cover; /* Make sure the image covers the entire box */
+    background-position: center;
+}
+.material-symbols-outlined {
+    position: absolute;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 24;
+  background-color: rgb(27, 35, 250);
+  border-radius: 999px;
+  color:white ;
+ margin-top:-25px;
+ margin-left:24%;
+}
+.offer strike{
+    color:red;
+    margin-left: 10px;
+    justify-content: space-between; /* Distribute children evenly */
+    align-items: center;
+}
+.recentl1-Pro3{
+    margin:5px;
+    margin-top: 30px;
+    height: 44%;
+    width: 100%;
+    background: url('./img/highlighter.jpg') no-repeat center center; /* Set background image */
+    background-size: cover; /* Make sure the image covers the entire box */
+    background-position: center;
+}
+/* slider feedback code in index.html */
+.swiper-container{
+    margin-top:3%;
+    width:90%;
+    height:500px;
+    display: flex;
+    justify-content: space-between; /* Distribute children evenly */
+    align-items: center;
+    padding:5px;
+
+}
+.swiper-slide {
+    height:98%;
+    width:20%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin-left: 80px;
+
+}
+.swiper-slide img{
+    background-size: contain; /* Make sure the image covers the entire box */
+    background-position: center;
+}
+.swiper-pagination .swiper-button-next{
+    position: relative;
+    margin-top: 50%;
+}
+
+.star-rating {
+    display: flex;
+    gap: 5px;
+    font-size: 1.5em;
+    margin-top: 8%;
+    margin-left: 65%;
+    
+  }
+  .footer {
+    background-color: #f8f9fa; /* Light gray */
+    padding: 20px 0;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  .footer-top {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .footer-top h2 {
+    font-size: 24px;
+    color: #4c6e2f; /* Light blue */
+    margin-bottom: 10px;
+  }
+  
+  .footer-top p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .footer-column {
+    margin-bottom: 20px;
+  }
+  
+  .footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-column ul li a {
+    color: #4c6e2f;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-column ul li a:hover {
+    color:#4c6e2f; /* Darker blue */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    padding-top: 10px;
+    color: #777;
+  }
+  .p1, .p2 {
+    position: absolute; /* Absolute positioning for text */
+    color: white; /* Text color for better visibility */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for contrast */
+  }
+
+  .p1 {
+    top: 50%; /* Position the first text */
+    left: 50%;
+    color:#4c6e2f; 
+    transform: translate(-50%, -50%); /* Center the text horizontally */
+    font-size: 5em;
+  
+  }
+
+  .p2 {
+    top: 65%; /* Position the second text below the first */
+    left: 50%;
+    color:#4c6e2f; 
+    transform: translate(-50%, -50%);
+    font-size: 5em;
+  }

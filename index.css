@@ -10,13 +10,9 @@ overflow-x: hidden;
    box-sizing:border-box;
    font-family:'Sriracha';
 }
-body{
-   
-   
-}
+
 header{
-    position:fixed;
-    background: url('./d60.png');
+    background: url('./img/d60.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -38,10 +34,11 @@ header{
     width: 90%;
     margin-top:10%;
 }
+
 .navigation a{ 
     position:relative;
     font-size: 1.1em;
-    color: #178133;
+    color: #4c6e2f;
     font-weight: 700;
     margin-left: 40px;
 }
@@ -63,10 +60,15 @@ transform: scaleX(1);
 text-decoration: underline;
 }
 
+.no-hover{
+    
+    cursor: default;
+}
+
 .popup-button{
     width:150px;
     height: 50px;
-   
+    text-align: center;
     border: 2px solid #4c6e2f;
     outline: auto;
     border-radius: 6px;
@@ -76,179 +78,51 @@ text-decoration: underline;
     font-weight: 500;
     margin-left: 40px;
     transition:1s;
-}
-
-.pop-button:hover{
-    background:#4c6e2f;
-    color: #4c6e2f;
-
-}
-.wrapper{
-    position: relative;
-    width: 400px;
-    height: 440px;
-   
-    border: 2px solid  rgba(255, 255, 255, .5);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    transform: scale(0);
-    transition: transform .5s ease-out, height .2s ease;
-}
-
-.wrapper.active-popup{
-    transform: scale(1);
-}
-
-.wrapper .close{
-    position: absolute;
-    align-items: center;
-    top: 0;
-    right: 0;
-    height: 35px;
-    width: 40px;
-    font-size: 2em;
-    color: #4c6e2f;
-    display: flex;
-    justify-content: center;
-    border: none;
-    background: #d6dccc;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
-     
+  
 }
 
  
-.wrapper .form-box{
-width: 100%;
-padding: 40px;
-}
-.wrapper.active{
-    height: 520px;
-}
-.wrapper.active .form-box.login{
-    transition: none;
-    transform: translateX(-400px);
-}
-.wrapper .form-box.login{
-    transition: transform .18s ease ;
-    transform: translateX(0);
+/* Dropdown Styles */
+.dropdown {
+    margin-top: -30;
+    margin-left: 20%;
+    position:relative;
 }
 
-.wrapper .form-box.signup{
-    position: absolute;
-    transition: none;
-    transform: translateX(400px);
-}
- 
-.wrapper.active .form-box.signup{
-    transition: transform .18s ease ;
-    transform: translateX(0);
-}
-.form-box h2{
-    font-size: 2em;
-    text-align: center;
-}
-.input-box{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    border-bottom: 2px solid #d6dccc;
-    margin: 30px 0 ;
-}
-.input-box label{
-    position:absolute;
-    top: 50%;
-    left:5px;
-    transform: translateY(-50%);
-    font-size: 1em;
-    color: #4c6e2f;
-    font-weight: 500;
-    pointer-events: none;
-    transition: .5s;
-}
-
-.input-box input:focus~label,
-.input-box input:valid~label{
-    top:3px ;
-}
-
-
-.input-box input{
-    width: 100%;
-    height: 100%;
-   
-    border: none;
-    outline: none;
-    color: black;
-    font-weight: 500;
-    padding: 0 35px 0 5px;
-}
-
-.input-box .icon{
-    position: absolute;
-    right: 8px;
-    font-size: 1.2em;
-    color: #4c6e2f;
-    line-height: 57px;
-}
-
-.remember-forget{
-    font-size: .9em;
-    color: #4c6e2f;
-    font-weight: 500;
-    margin: 15 0 15;
-    display: flex;
-    justify-content:space-between ;
-}
-.remember-forget label input{
-    accent-color: #d6dccc;
-   margin-right: 3px;
-}
-.remember-forget a{
-    color: #4c6e2f;
-    text-decoration: dashed;
-}
-.remember-forget a:hover{
-    text-decoration: underline; 
-}
-
-.btn{
-    width: 100%;
-    height: 40px;
-    margin-top: 10px;
-    outline: none;
-    border-radius: 9px;
-    background: #d6dccc;
-    border: white;
+.dropdown-link {
     cursor: pointer;
-    font-size: 1.2em;
-    color:#4c6e2f ;
+    padding: 10px;
 }
-.btn a{
-    font-size:.9em;
-    color: antiquewhite;
+
+/* Initially hide the dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #928f8f;
+    top: 100%;
+    margin-left: 300px;
+
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-.register {
-     
-    text-align: center;
-     
 
+.dropdown-menu a {
+    padding: 5px;
+    text-align: left;
 }
-.register a{
-    font-size: .9em;
-    color: #4c6e2f;
+
+/* .dropdown-menu a:hover {
+    background-color: #575757;
+} */
+
+/* Show the dropdown menu when hovering over the parent */
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
- 
-
-
-
-
-
-
-
-
+.footer{
+    background: url("./img/d60.jpg");
+    height: 400px;
+    width:100%;
+    margin-top: 20px;
+}
